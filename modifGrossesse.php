@@ -37,7 +37,7 @@ if (isset($_POST['newGrossesse'])){
 <html>
 <head>
 	<meta charset="utf-8" />	
-	<title>pdbc</title>
+	<title>Modification de grossesses</title>
 </head>
 <body>
 

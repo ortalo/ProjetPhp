@@ -46,7 +46,7 @@ $ligne = $resultat->fetch();
                <a href=#>xxx</a>
              </li>
              <li>
-               <a href=#>xxx</a>
+               <a href="modifGrossesse.php">Modification des Grossesses</a>
              </li>
              ';
 

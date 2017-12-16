@@ -40,7 +40,7 @@ $ligne = $resultat->fetch();
  		echo "Dossier Trouvé";
  		echo'<ul id="sous_menu">
              <li>
-               <a href="Deletechir.html">Suppression Antécedent chirurgical</a>
+               <a href="SuppressionATCDChir.html">Suppression Antécedent chirurgical</a>
              </li>
              <li>
                <a href=#>xxx</a>

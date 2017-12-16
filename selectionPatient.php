@@ -44,8 +44,9 @@ $ligne = $resultat->fetch();
              </li>
              <li>
                <a href=#>xxx</a>
-             </li>
-             <li>
+             </li>';
+        if($ligneSexe[0]=='2'){
+        echo'<li>
                <a href="modifGrossesse.php">Modification des Grossesses</a>
              </li>
              ';

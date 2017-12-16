@@ -1,0 +1,99 @@
+
+html {
+	margin: 0;
+	padding: 0;
+	}
+
+#sous_menu{
+list-style-type:none; /* On enlève la puce */
+padding:0;
+width:  50%;  /* J'ai mis une largeur pour ne pas prendre toute la largeur de l'écran */
+border : solid 1px #a3c0d5
+;  /* On applique des bordures à la balise ul */
+border-bottom: none; /* …et on retire celle du bas */
+}
+
+#sous_menu li{
+height :30px;
+text-align: center;
+background-color: #90EE90
+;
+border-bottom: 1px solid #a3c0d5
+;  /* Ici, on affiche une bordure uniquement en bas */
+}
+
+#sous_menu a{
+text-decoration:none;  /* On enlève le soulignement */
+color:#294f79
+;
+font-size: 18px;
+font-weight: bold;
+}
+
+body { 
+	font: 90% georgia, sans-serif;
+	line-height: 1.88889;
+	color: #555753; 
+	margin: 0; 
+	padding: 0;
+	}
+p { 
+	margin-top: 0; 
+	text-align: justify;
+	}
+h3 { 
+	font: italic normal 1.4em georgia, sans-serif;
+	letter-spacing: 1px; 
+	margin-bottom: 0; 
+	color: #7D775C;
+	}
+a:link { 
+	font-weight: bold; 
+	text-decoration: none; 
+	color: #B7A5DF;
+	}
+a:visited { 
+	font-weight: bold; 
+	text-decoration: none; 
+	color: #D4CDDC;
+	}
+a:hover, a:focus, a:active { 
+	text-decoration: underline; 
+	color: #9685BA;
+	}
+
+
+header h1 { 
+	margin-top: 10px;
+	display: block;
+	width: 219px;
+	height: 87px;
+	float: left;
+
+	text-indent: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+	}
+header h2 { 
+	margin-top: 58px; 
+	margin-bottom: 40px; 
+	width: 200px; 
+	height: 18px; 
+	float: right;
+
+	text-indent: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+	}
+header {
+	padding-top: 20px;
+	height: 87px;
+}
+
+
+footer { 
+	text-align: center; 
+	}
+footer a:link, footer a:visited { 
+	margin-right: 20px; 
+	}

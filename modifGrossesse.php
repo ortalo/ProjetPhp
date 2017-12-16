@@ -73,6 +73,7 @@ catch (Exception $e)
   <input type="submit" value="Ajouter la grossesse">
      </fieldset>
 </form> 
-
+<br /><a href="selectionPatient.html">Retour à la saisie du numero de dossier</a><br />
+ <a href="menu.html">Retour a la page principale</a>
 </body>
 </html>

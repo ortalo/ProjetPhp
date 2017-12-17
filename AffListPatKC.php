@@ -49,6 +49,8 @@ $ligne = $resultat->fetch();
 
 // RETOUR 
 	
+echo '<a href="AffListPAtKC.html">Retour au menu précedent</a><br />';
+echo '<a href="Menu.html">Retour a la page principale</a>';
 ?>
 
 

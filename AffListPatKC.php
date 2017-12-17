@@ -49,8 +49,6 @@ $ligne = $resultat->fetch();
 
 // RETOUR 
 	
-echo '<a href="http://127.0.0.1/PHP_INF204/AffichageKC.html">Retour au menu précedent</a><br />';
-echo '<a href="xxxx">Retour a la page principale</a>';
 ?>
 
 

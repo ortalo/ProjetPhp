@@ -38,18 +38,21 @@ $ligne = $resultat->fetch();
  		
  		
  		echo "Dossier Trouvé";
- 		echo'<ul id="sous_menu">
+ 		echo '<ul id="sous_menu">
+ 				<li>
+ 				<a href="AfficherDonnees.html">Afficher données patient</a>
+ 			';
+/* 		echo'<ul id="sous_menu">
              <li>
-               <a href="SuppressionATCDChir.html">Suppression Antécedent chirurgical</a>
+               <a href="AffListPatKC.html">Afficher Situation initiale KC patient</a>
              </li>
              <li>
-               <a href=#>xxx</a>
-             </li>';
-        if($ligneSexe[0]=='2'){
-        echo'<li>
-               <a href="modifGrossesse.php">Modification des Grossesses</a>
+               <a href="AffGross.html">Afficher grossesse</a>
              </li>
-             ';
+             <li>
+               <a href="AffContact.html">Afficher informations contactologie</a>
+             </li>
+             ';*/
 
  	}
 	else
@@ -62,8 +65,8 @@ $resultat->closeCursor();
 
 // RETOUR MENU
 
-echo '<br /><a href="selectionPatient.html">Retour à la saisie du numero de dossier</a><br />';
-echo '<a href="xxxx">Retour a la page principale</a>';
+echo '<br /><a href="AffrchPat.html">Retour à la saisie du numero de dossier</a><br />';
+echo '<a href="Menu.html">Retour a la page principale</a>';
 
 ?>
 

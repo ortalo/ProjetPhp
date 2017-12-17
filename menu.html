@@ -1,49 +1,49 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8"> 
-    <style type="text/css">
-     #sous_menu{
-list-style-type:none; /* On enlève la puce */
-padding:0;
-width:  20%;  /* J'ai mis une largeur pour ne pas prendre toute la largeur de l'écran */
-border : solid 1px #a3c0d5
-;  /* On applique des bordures à la balise ul */
-border-bottom: none; /* …et on retire celle du bas */
-}
-
-#sous_menu li{
-height :30px;
-text-align: center;
-background-color: #90EE90
-;
-border-bottom: 1px solid #a3c0d5
-;  /* Ici, on affiche une bordure uniquement en bas */
-}
-
-#sous_menu a{
-text-decoration:none;  /* On enlève le soulignement */
-color:#294f79
-;
-font-size: 18px;
-font-weight: bold;
-}
-
-</style>
-    <title></title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" type="text/css" href="projet_phase2.css">
+<title>Accueil BDD kératocône</title>
 </head>
 <body>
+<article>
+<header><h1><b>Accueil BDD kératocône<br/></b></h1></header>
+<aside>
+Master 2 SITIS<br/>
+Décembre 2017<br/>
+</aside>
+</article>
 <ul id="sous_menu">
              <li>
-               <a href="xxxx.html">Afficher des données</a>
+               <a href="AfficherDonnees.html">Afficher des données</a>
              </li>
              <li>
-               <a href="SelectionPatient.html">Modifier les données d'un patient</a>
+               <a href="ModifierDonnees.html">Modifier les données d'un patient</a>
              </li>
              <li>
-               <a href="INSERTFI.html"> Inserer un nouveau patient</a>
+               <a href="InsererNouveau.html"> Inserer un nouveau patient</a>
              </li>
-             
-             
+<footer>Site web réalisé en collaboration par : Pierre ORTALO, Hadrien SENTENAC, Louis BILLIET</footer>
+
+<!-- <div class="tab">
+  <button class="tablinks" onclick="window.location.href='/KTC_affichage'">Affichage</button>
+  <button class="tablinks" onclick="window.location.href='/KTC_modification'">Modification</button>
+  <button class="tablinks" onclick="window.location.href='/KTC_suppression'">Suppression</button>
+</div>
+
+<div id="Affichage" class="tabcontent">
+  <h3>Affichage</h3>
+  <p>Cliquez ici pour consulter les données de la BDD kératocône</p>
+</div>
+
+<div id="Modification" class="tabcontent">
+  <h3>Modification</h3>
+  <p>Cliquez ici pour modifier les données de la BDD kératocône</p> 
+</div>
+
+<div id="Suppression" class="tabcontent">
+  <h3>Suppression</h3>
+  <p>Cliquez ici pour supprimer des données de la BDD kératocône</p>
+</div>  -->
 </body>
 </html>

@@ -1,3 +1,5 @@
+<?php session_start(); ?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -26,7 +28,7 @@ $_SESSION['numpat'] = $_POST['Numpat'];
 
 // REQUETE DE SELECTION DE TOUS LES NUMERO DOSSIER
 
-$requete= "select Num_dossier FROM tab_patient WHERE Num_dossier =".$_SESSION['numpat'].";";
+$requete= "select Num_dossier, Sexe FROM tab_patient WHERE Num_dossier =".$_SESSION['numpat'].";";
 $resultat=$bdd->query($requete);
 $ligne = $resultat->fetch();
 
@@ -41,11 +43,12 @@ $ligne = $resultat->fetch();
  		echo'<ul id="sous_menu">
              <li>
                <a href="SupprAtcChir.html">Suppression Antécedent chirurgical</a>
-             </li>
-             <li>
-               <a href="ModifGross.html">Modifier grossesse</a>
-             </li>
-             <li>
+             </li>';
+        if($ligne['Sexe']==2){echo 
+            '<li>
+               <a href="ModifGrossesse.php">Modifier grossesse</a>
+             </li>';}   
+          echo'   <li>
                <a href="ModifAdress.html">Modifier adresse</a>
              </li>
              ';

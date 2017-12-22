@@ -37,7 +37,7 @@ $bdd->query($requete);
 
 // RETOUR MENU
 
-echo "Ajout reussi";
+echo "Ajout reussi <br />";
 echo '<a href="InserFichIniti.html">Retour au menu précedent</a><br />';
 echo '<a href="Menu.html">Retour a la page principale</a>';
 ?>

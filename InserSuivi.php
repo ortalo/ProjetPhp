@@ -3,12 +3,12 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <link rel="stylesheet" type="text/css" href="projet_phase2.css">
-	<title>Insertion fiche initiale</title>
+	<title>Validation insertion donnees de suivi</title>
 </head>
 <body>
 <?php
 
-// CONNECTION A LA BASE
+// connexion à la base avec gestion exception
 	try
 		{
 			$bdd = new PDO('mysql:host=localhost;dbname=kc', 'root', '',		 	array(PDO::ATTR_ERRMODE => 	PDO::ERRMODE_EXCEPTION));
@@ -19,26 +19,33 @@
 		};
 
 
-// ENREGISTREMENT DES DONNEES QUE L'UTILISATEUR VEUT INSERER
+// récupération variables depuis le formulaire
 	
-$nom = $_POST['Nom'];
-$prenom = $_POST['Prenom'];
-$DDS = $_POST['DDS'];
-$KCOD = $_POST['KCOD'];
-$KCOG = $_POST['KCOG'];
+$iDSuivi = $_POST['iDSuivi'];
+$typCs = $_POST['typCs'];
+$numDoss = $_POST['numDoss'];
+$date = $_POST['date'];
+$sFdet = $_POST['sFdet'];
+$bAVRpd = $_POST['bAVRpd'];
+$bAVLente = $_POST['bAVLente'];
+$halNoct = $_POST['halNoct'];
+$photoph = $_POST['photoph'];
+$visDoubl = $_POST['visDoubl'];
+$rougOcul = $_POST['rougOcul'];
+$autrSFOc = $_POST['autrSFOc'];
+$autreDet = $_POST['autreDet'];
+$frotYx = $_POST['frotYx'];
+$portLent = $_POST['portLent'];
+$adaptLent = $_POST['adaptLent'];
+$nbHrJrLent = $_POST['nbHrJrLent'];
+$nbJrSemLent = $_POST['nbJrSemLent'];
 
-// REQUETE D'INSERTION
+$reqInsSuiv= "insert INTO tab_suivi(ID_suivi, Type_consult, Num_dossier,Date, Signes_Fonctionnels_Details, BAVrapide, BAVLente, Halos_noct, Photophobie, Vision_ddblee, Rougeurs_ocul, Autre, Autre_det, Frottement_yeux, Port_lentille, Tolerance, Nb_hrL_jr, Nb_jrL_sem) VALUES (".$iDSuivi.", ".$typCs.", '".$numDoss."', '".$date."', '".$sFdet."', ".$bAVRpd.", ".$bAVLente.", ".$halNoct.", ".$photoph.", ".$visDoubl.", ".$rougOcul.", ".$autrSFOc.", '".$autreDet."', ".$frotYx.", ".$portLent.", ".$adaptLent.", ".$nbHrJrLent.", ".$nbJrSemLent.");";
 
-$requete= "insert INTO tab_patient(Num_dossier,Date_debut_suivi, Nom, Pren, Adressage, Typ_consul, Sexe, Date_nais, CSP, Ethnie, Com_ou_Pays_nais, Annee_dec_KC, Lat_man, Tabagisme_actif, nb_cig_jr, Nb_annees, Tabagisme_passif, Situation_init_KC_OD, Situation_init_KC_OG) VALUES (null,".$DDS.",'".$nom."','".$prenom."',null,null,null,null,null,null,null,null,null,null,null,null,null,".$KCOD.",".$KCOG."); ";
+$bdd->query($reqInsSuiv);
 
-
-$bdd->query($requete);
-
-
-// RETOUR MENU
-
-echo "Ajout reussi";
-echo '<a href="InserFichIniti.html">Retour au menu précedent</a><br />';
+echo "Ajout de données de suivi reussi";
+echo '<a href="InserSuivi.html">Retour au menu precedent</a><br />';
 echo '<a href="Menu.html">Retour a la page principale</a>';
 ?>
 </body>

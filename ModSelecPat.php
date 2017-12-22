@@ -3,7 +3,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" type="text/css" href="projet_phase2.css">
+	<title>Selection Numéro Patient</title>
 </head>
 <body>
 <?php

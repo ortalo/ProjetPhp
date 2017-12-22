@@ -8,7 +8,7 @@
 <body>
 <?php
 
-session_start();
+
 
 // CONNECTION A LA BASE
 

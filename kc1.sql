@@ -1,4 +1,5 @@
 -- phpMyAdmin SQL Dump
+<<<<<<< HEAD
 -- version 4.7.4
 -- https://www.phpmyadmin.net/
 --
@@ -10,6 +11,17 @@
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
 START TRANSACTION;
+=======
+-- version 4.7.3
+-- https://www.phpmyadmin.net/
+--
+-- Host: localhost:8889
+-- Generation Time: Dec 22, 2017 at 02:38 PM
+-- Server version: 5.6.35
+-- PHP Version: 7.1.8
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+>>>>>>> 886d5b55be4a8eb7a6634f8455e57d6e66c7b280
 SET time_zone = "+00:00";
 
 
@@ -19,8 +31,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
+<<<<<<< HEAD
 -- Base de données :  `kc`
 --
+=======
+-- Database: `kc`
+-- 
+>>>>>>> 886d5b55be4a8eb7a6634f8455e57d6e66c7b280
 
 -- --------------------------------------------------------
 
@@ -44,16 +61,27 @@ CREATE TABLE `historique_atcd_chir` (
 
 INSERT INTO `historique_atcd_chir` (`ID_Chirurgie`, `Oeil`, `Numdossier`, `Code_chir`, `Autre_type_chir`, `Date_chir`, `Chirurgie_comm`) VALUES
 (8, 1, '105230', 1, '', '2006-08-07 00:00:00', ''),
+<<<<<<< HEAD
 (411, 2, '105230', 1, '', '0000-00-00 00:00:00', ''),
 (412, 1, '105230', 4, '', '2001-02-09 00:00:00', ''),
 (444, 1, '105230', 4, '', '2001-02-09 00:00:00', '');
+=======
+(411, 2, '105230', 1, '', '0000-00-00 00:00:00', '');
+>>>>>>> 886d5b55be4a8eb7a6634f8455e57d6e66c7b280
 
 -- --------------------------------------------------------
 
 --
+<<<<<<< HEAD
 -- Structure de la table `history_grossesse`
 --
 
+=======
+-- Table structure for table `history_grossesse`
+--
+
+DROP TABLE IF EXISTS `history_grossesse`;
+>>>>>>> 886d5b55be4a8eb7a6634f8455e57d6e66c7b280
 CREATE TABLE `history_grossesse` (
   `History_num_dossier` int(255) NOT NULL,
   `History_IdGrossesse` int(11) NOT NULL,
@@ -63,7 +91,11 @@ CREATE TABLE `history_grossesse` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
+<<<<<<< HEAD
 -- Déchargement des données de la table `history_grossesse`
+=======
+-- Dumping data for table `history_grossesse`
+>>>>>>> 886d5b55be4a8eb7a6634f8455e57d6e66c7b280
 --
 
 INSERT INTO `history_grossesse` (`History_num_dossier`, `History_IdGrossesse`, `History_annee`, `History_date_modif`, `History_action`) VALUES
@@ -73,9 +105,16 @@ INSERT INTO `history_grossesse` (`History_num_dossier`, `History_IdGrossesse`, `
 -- --------------------------------------------------------
 
 --
+<<<<<<< HEAD
 -- Structure de la table `tab_atcdperso`
 --
 
+=======
+-- Table structure for table `tab_atcdperso`
+--
+
+DROP TABLE IF EXISTS `tab_atcdperso`;
+>>>>>>> 886d5b55be4a8eb7a6634f8455e57d6e66c7b280
 CREATE TABLE `tab_atcdperso` (
   `ID_ATCD` int(11) NOT NULL,
   `Num_dossier` varchar(255) DEFAULT NULL,
@@ -87,7 +126,11 @@ CREATE TABLE `tab_atcdperso` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
+<<<<<<< HEAD
 -- Déchargement des données de la table `tab_atcdperso`
+=======
+-- Dumping data for table `tab_atcdperso`
+>>>>>>> 886d5b55be4a8eb7a6634f8455e57d6e66c7b280
 --
 
 INSERT INTO `tab_atcdperso` (`ID_ATCD`, `Num_dossier`, `Categorie_atcd`, `Num_Type`, `Autre_ATCD`, `Traitement_act`, `Traitement_passe`) VALUES
@@ -568,9 +611,16 @@ INSERT INTO `tab_atcdperso` (`ID_ATCD`, `Num_dossier`, `Categorie_atcd`, `Num_Ty
 -- --------------------------------------------------------
 
 --
+<<<<<<< HEAD
 -- Structure de la table `tab_atcd_famil`
 --
 
+=======
+-- Table structure for table `tab_atcd_famil`
+--
+
+DROP TABLE IF EXISTS `tab_atcd_famil`;
+>>>>>>> 886d5b55be4a8eb7a6634f8455e57d6e66c7b280
 CREATE TABLE `tab_atcd_famil` (
   `Id_ATCD fam` int(11) NOT NULL,
   `Num_dossier` varchar(255) DEFAULT NULL,
@@ -579,7 +629,11 @@ CREATE TABLE `tab_atcd_famil` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
+<<<<<<< HEAD
 -- Déchargement des données de la table `tab_atcd_famil`
+=======
+-- Dumping data for table `tab_atcd_famil`
+>>>>>>> 886d5b55be4a8eb7a6634f8455e57d6e66c7b280
 --
 
 INSERT INTO `tab_atcd_famil` (`Id_ATCD fam`, `Num_dossier`, `Code_ATCD_fam`, `Codage parente`) VALUES
@@ -887,9 +941,16 @@ INSERT INTO `tab_atcd_famil` (`Id_ATCD fam`, `Num_dossier`, `Code_ATCD_fam`, `Co
 -- --------------------------------------------------------
 
 --
+<<<<<<< HEAD
 -- Structure de la table `tab_chirurgie`
 --
 
+=======
+-- Table structure for table `tab_chirurgie`
+--
+
+DROP TABLE IF EXISTS `tab_chirurgie`;
+>>>>>>> 886d5b55be4a8eb7a6634f8455e57d6e66c7b280
 CREATE TABLE `tab_chirurgie` (
   `ID_Chirurgie` int(11) NOT NULL,
   `Oeil` double NOT NULL,
@@ -901,7 +962,11 @@ CREATE TABLE `tab_chirurgie` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
+<<<<<<< HEAD
 -- Déchargement des données de la table `tab_chirurgie`
+=======
+-- Dumping data for table `tab_chirurgie`
+>>>>>>> 886d5b55be4a8eb7a6634f8455e57d6e66c7b280
 --
 
 INSERT INTO `tab_chirurgie` (`ID_Chirurgie`, `Oeil`, `NumDossier`, `Code_chir`, `Autre_type_chir`, `Date_chir`, `Chirurgie_comm`) VALUES
@@ -1288,6 +1353,10 @@ INSERT INTO `tab_chirurgie` (`ID_Chirurgie`, `Oeil`, `NumDossier`, `Code_chir`, 
 (409, 1, '132529', 1, '', '0000-00-00 00:00:00', ''),
 (410, 1, '132529', 4, '', '2009-10-09 00:00:00', ''),
 (411, 2, '105230', 1, '', '0000-00-00 00:00:00', ''),
+<<<<<<< HEAD
+=======
+(412, 1, '105230', 4, '', '2001-02-09 00:00:00', ''),
+>>>>>>> 886d5b55be4a8eb7a6634f8455e57d6e66c7b280
 (413, 2, '363659', 1, '', '0000-00-00 00:00:00', ''),
 (414, 2, '165310', 1, '', '0000-00-00 00:00:00', ''),
 (415, 1, '165310', 1, '', '2009-10-09 00:00:00', ''),
@@ -1319,6 +1388,10 @@ INSERT INTO `tab_chirurgie` (`ID_Chirurgie`, `Oeil`, `NumDossier`, `Code_chir`, 
 (441, 2, '300173', 1, '', '0000-00-00 00:00:00', ''),
 (442, 1, '121916', 1, '', '2008-07-09 00:00:00', ''),
 (443, 1, '119492', 1, '', '0000-00-00 00:00:00', ''),
+<<<<<<< HEAD
+=======
+(444, 1, '105230', 4, '', '2001-02-09 00:00:00', ''),
+>>>>>>> 886d5b55be4a8eb7a6634f8455e57d6e66c7b280
 (445, 2, '179930', 5, '', '2006-11-09 00:00:00', ''),
 (446, 2, '326963', 1, '', '0000-00-00 00:00:00', ''),
 (447, 1, '326963', 1, '', '0000-00-00 00:00:00', ''),
@@ -1485,19 +1558,34 @@ CREATE TRIGGER `trig_apres_delete_chir` AFTER DELETE ON `tab_chirurgie` FOR EACH
 $$
 DELIMITER ;
 
+<<<<<<< HEAD
 -- --------------------------------------------------------
 
 --
 -- Structure de la table `tab_codage_adaptation`
 --
 
+=======
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tab_codage_adaptation`
+--
+
+DROP TABLE IF EXISTS `tab_codage_adaptation`;
+>>>>>>> 886d5b55be4a8eb7a6634f8455e57d6e66c7b280
 CREATE TABLE `tab_codage_adaptation` (
   `Code_CS_Adaptation` int(11) NOT NULL,
   `Type_CS_Adaptation` varchar(50) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
+<<<<<<< HEAD
 -- Déchargement des données de la table `tab_codage_adaptation`
+=======
+-- Dumping data for table `tab_codage_adaptation`
+>>>>>>> 886d5b55be4a8eb7a6634f8455e57d6e66c7b280
 --
 
 INSERT INTO `tab_codage_adaptation` (`Code_CS_Adaptation`, `Type_CS_Adaptation`) VALUES
@@ -1508,16 +1596,27 @@ INSERT INTO `tab_codage_adaptation` (`Code_CS_Adaptation`, `Type_CS_Adaptation`)
 -- --------------------------------------------------------
 
 --
+<<<<<<< HEAD
 -- Structure de la table `tab_codage_adressage`
 --
 
+=======
+-- Table structure for table `tab_codage_adressage`
+--
+
+DROP TABLE IF EXISTS `tab_codage_adressage`;
+>>>>>>> 886d5b55be4a8eb7a6634f8455e57d6e66c7b280
 CREATE TABLE `tab_codage_adressage` (
   `Codage` double NOT NULL,
   `Adressage` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
+<<<<<<< HEAD
 -- Déchargement des données de la table `tab_codage_adressage`
+=======
+-- Dumping data for table `tab_codage_adressage`
+>>>>>>> 886d5b55be4a8eb7a6634f8455e57d6e66c7b280
 --
 
 INSERT INTO `tab_codage_adressage` (`Codage`, `Adressage`) VALUES
@@ -1528,9 +1627,16 @@ INSERT INTO `tab_codage_adressage` (`Codage`, `Adressage`) VALUES
 -- --------------------------------------------------------
 
 --
+<<<<<<< HEAD
 -- Structure de la table `tab_codage_atcd`
 --
 
+=======
+-- Table structure for table `tab_codage_atcd`
+--
+
+DROP TABLE IF EXISTS `tab_codage_atcd`;
+>>>>>>> 886d5b55be4a8eb7a6634f8455e57d6e66c7b280
 CREATE TABLE `tab_codage_atcd` (
   `Num_atcd` double NOT NULL,
   `ID_Categorie_ATCD` int(11) DEFAULT NULL,
@@ -1538,7 +1644,11 @@ CREATE TABLE `tab_codage_atcd` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
+<<<<<<< HEAD
 -- Déchargement des données de la table `tab_codage_atcd`
+=======
+-- Dumping data for table `tab_codage_atcd`
+>>>>>>> 886d5b55be4a8eb7a6634f8455e57d6e66c7b280
 --
 
 INSERT INTO `tab_codage_atcd` (`Num_atcd`, `ID_Categorie_ATCD`, `Type ATCD`) VALUES
@@ -1562,16 +1672,27 @@ INSERT INTO `tab_codage_atcd` (`Num_atcd`, `ID_Categorie_ATCD`, `Type ATCD`) VAL
 -- --------------------------------------------------------
 
 --
+<<<<<<< HEAD
 -- Structure de la table `tab_codage_atcd_famil`
 --
 
+=======
+-- Table structure for table `tab_codage_atcd_famil`
+--
+
+DROP TABLE IF EXISTS `tab_codage_atcd_famil`;
+>>>>>>> 886d5b55be4a8eb7a6634f8455e57d6e66c7b280
 CREATE TABLE `tab_codage_atcd_famil` (
   `Code` double NOT NULL,
   `ATCD_familier` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
+<<<<<<< HEAD
 -- Déchargement des données de la table `tab_codage_atcd_famil`
+=======
+-- Dumping data for table `tab_codage_atcd_famil`
+>>>>>>> 886d5b55be4a8eb7a6634f8455e57d6e66c7b280
 --
 
 INSERT INTO `tab_codage_atcd_famil` (`Code`, `ATCD_familier`) VALUES
@@ -1584,16 +1705,27 @@ INSERT INTO `tab_codage_atcd_famil` (`Code`, `ATCD_familier`) VALUES
 -- --------------------------------------------------------
 
 --
+<<<<<<< HEAD
 -- Structure de la table `tab_codage_catatcd`
 --
 
+=======
+-- Table structure for table `tab_codage_catatcd`
+--
+
+DROP TABLE IF EXISTS `tab_codage_catatcd`;
+>>>>>>> 886d5b55be4a8eb7a6634f8455e57d6e66c7b280
 CREATE TABLE `tab_codage_catatcd` (
   `ID_categorie_ATCD` int(11) NOT NULL,
   `Categorie_ATCD` varchar(50) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
+<<<<<<< HEAD
 -- Déchargement des données de la table `tab_codage_catatcd`
+=======
+-- Dumping data for table `tab_codage_catatcd`
+>>>>>>> 886d5b55be4a8eb7a6634f8455e57d6e66c7b280
 --
 
 INSERT INTO `tab_codage_catatcd` (`ID_categorie_ATCD`, `Categorie_ATCD`) VALUES
@@ -1603,16 +1735,27 @@ INSERT INTO `tab_codage_catatcd` (`ID_categorie_ATCD`, `Categorie_ATCD`) VALUES
 -- --------------------------------------------------------
 
 --
+<<<<<<< HEAD
 -- Structure de la table `tab_codage_chirurgie`
 --
 
+=======
+-- Table structure for table `tab_codage_chirurgie`
+--
+
+DROP TABLE IF EXISTS `tab_codage_chirurgie`;
+>>>>>>> 886d5b55be4a8eb7a6634f8455e57d6e66c7b280
 CREATE TABLE `tab_codage_chirurgie` (
   `Code` double NOT NULL,
   `Chirurgie` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
+<<<<<<< HEAD
 -- Déchargement des données de la table `tab_codage_chirurgie`
+=======
+-- Dumping data for table `tab_codage_chirurgie`
+>>>>>>> 886d5b55be4a8eb7a6634f8455e57d6e66c7b280
 --
 
 INSERT INTO `tab_codage_chirurgie` (`Code`, `Chirurgie`) VALUES
@@ -1627,16 +1770,27 @@ INSERT INTO `tab_codage_chirurgie` (`Code`, `Chirurgie`) VALUES
 -- --------------------------------------------------------
 
 --
+<<<<<<< HEAD
 -- Structure de la table `tab_codage_csp`
 --
 
+=======
+-- Table structure for table `tab_codage_csp`
+--
+
+DROP TABLE IF EXISTS `tab_codage_csp`;
+>>>>>>> 886d5b55be4a8eb7a6634f8455e57d6e66c7b280
 CREATE TABLE `tab_codage_csp` (
   `Code` double NOT NULL,
   `CSP` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
+<<<<<<< HEAD
 -- Déchargement des données de la table `tab_codage_csp`
+=======
+-- Dumping data for table `tab_codage_csp`
+>>>>>>> 886d5b55be4a8eb7a6634f8455e57d6e66c7b280
 --
 
 INSERT INTO `tab_codage_csp` (`Code`, `CSP`) VALUES
@@ -1652,16 +1806,27 @@ INSERT INTO `tab_codage_csp` (`Code`, `CSP`) VALUES
 -- --------------------------------------------------------
 
 --
+<<<<<<< HEAD
 -- Structure de la table `tab_codage_ethnie`
 --
 
+=======
+-- Table structure for table `tab_codage_ethnie`
+--
+
+DROP TABLE IF EXISTS `tab_codage_ethnie`;
+>>>>>>> 886d5b55be4a8eb7a6634f8455e57d6e66c7b280
 CREATE TABLE `tab_codage_ethnie` (
   `Code_ethnie` double NOT NULL,
   `Ethnie` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
+<<<<<<< HEAD
 -- Déchargement des données de la table `tab_codage_ethnie`
+=======
+-- Dumping data for table `tab_codage_ethnie`
+>>>>>>> 886d5b55be4a8eb7a6634f8455e57d6e66c7b280
 --
 
 INSERT INTO `tab_codage_ethnie` (`Code_ethnie`, `Ethnie`) VALUES
@@ -1674,16 +1839,27 @@ INSERT INTO `tab_codage_ethnie` (`Code_ethnie`, `Ethnie`) VALUES
 -- --------------------------------------------------------
 
 --
+<<<<<<< HEAD
 -- Structure de la table `tab_codage_frottement_oculaire`
 --
 
+=======
+-- Table structure for table `tab_codage_frottement_oculaire`
+--
+
+DROP TABLE IF EXISTS `tab_codage_frottement_oculaire`;
+>>>>>>> 886d5b55be4a8eb7a6634f8455e57d6e66c7b280
 CREATE TABLE `tab_codage_frottement_oculaire` (
   `Code_Frottement` int(11) NOT NULL,
   `Frottement_oculaire` varchar(50) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
+<<<<<<< HEAD
 -- Déchargement des données de la table `tab_codage_frottement_oculaire`
+=======
+-- Dumping data for table `tab_codage_frottement_oculaire`
+>>>>>>> 886d5b55be4a8eb7a6634f8455e57d6e66c7b280
 --
 
 INSERT INTO `tab_codage_frottement_oculaire` (`Code_Frottement`, `Frottement_oculaire`) VALUES
@@ -1696,16 +1872,27 @@ INSERT INTO `tab_codage_frottement_oculaire` (`Code_Frottement`, `Frottement_ocu
 -- --------------------------------------------------------
 
 --
+<<<<<<< HEAD
 -- Structure de la table `tab_codage_lateralite_manuelle`
 --
 
+=======
+-- Table structure for table `tab_codage_lateralite_manuelle`
+--
+
+DROP TABLE IF EXISTS `tab_codage_lateralite_manuelle`;
+>>>>>>> 886d5b55be4a8eb7a6634f8455e57d6e66c7b280
 CREATE TABLE `tab_codage_lateralite_manuelle` (
   `Code-Lateralite` double NOT NULL,
   `Lateralite` varchar(50) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
+<<<<<<< HEAD
 -- Déchargement des données de la table `tab_codage_lateralite_manuelle`
+=======
+-- Dumping data for table `tab_codage_lateralite_manuelle`
+>>>>>>> 886d5b55be4a8eb7a6634f8455e57d6e66c7b280
 --
 
 INSERT INTO `tab_codage_lateralite_manuelle` (`Code-Lateralite`, `Lateralite`) VALUES
@@ -1716,9 +1903,16 @@ INSERT INTO `tab_codage_lateralite_manuelle` (`Code-Lateralite`, `Lateralite`) V
 -- --------------------------------------------------------
 
 --
+<<<<<<< HEAD
 -- Structure de la table `tab_codage_nom_lentilles`
 --
 
+=======
+-- Table structure for table `tab_codage_nom_lentilles`
+--
+
+DROP TABLE IF EXISTS `tab_codage_nom_lentilles`;
+>>>>>>> 886d5b55be4a8eb7a6634f8455e57d6e66c7b280
 CREATE TABLE `tab_codage_nom_lentilles` (
   `Id_lentille` int(11) NOT NULL,
   `Nom_lentille` varchar(50) DEFAULT NULL,
@@ -1728,7 +1922,11 @@ CREATE TABLE `tab_codage_nom_lentilles` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
+<<<<<<< HEAD
 -- Déchargement des données de la table `tab_codage_nom_lentilles`
+=======
+-- Dumping data for table `tab_codage_nom_lentilles`
+>>>>>>> 886d5b55be4a8eb7a6634f8455e57d6e66c7b280
 --
 
 INSERT INTO `tab_codage_nom_lentilles` (`Id_lentille`, `Nom_lentille`, `Laboratoire`, `Type_Lentille`, `Geometrie_lentille`) VALUES
@@ -1794,16 +1992,27 @@ INSERT INTO `tab_codage_nom_lentilles` (`Id_lentille`, `Nom_lentille`, `Laborato
 -- --------------------------------------------------------
 
 --
+<<<<<<< HEAD
 -- Structure de la table `tab_codage_parente`
 --
 
+=======
+-- Table structure for table `tab_codage_parente`
+--
+
+DROP TABLE IF EXISTS `tab_codage_parente`;
+>>>>>>> 886d5b55be4a8eb7a6634f8455e57d6e66c7b280
 CREATE TABLE `tab_codage_parente` (
   `Code` double NOT NULL,
   `Parente` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
+<<<<<<< HEAD
 -- Déchargement des données de la table `tab_codage_parente`
+=======
+-- Dumping data for table `tab_codage_parente`
+>>>>>>> 886d5b55be4a8eb7a6634f8455e57d6e66c7b280
 --
 
 INSERT INTO `tab_codage_parente` (`Code`, `Parente`) VALUES
@@ -1818,16 +2027,27 @@ INSERT INTO `tab_codage_parente` (`Code`, `Parente`) VALUES
 -- --------------------------------------------------------
 
 --
+<<<<<<< HEAD
 -- Structure de la table `tab_codage_suivi`
 --
 
+=======
+-- Table structure for table `tab_codage_suivi`
+--
+
+DROP TABLE IF EXISTS `tab_codage_suivi`;
+>>>>>>> 886d5b55be4a8eb7a6634f8455e57d6e66c7b280
 CREATE TABLE `tab_codage_suivi` (
   `ID_CS_Suivi` int(11) NOT NULL,
   `Type_CS` varchar(50) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
+<<<<<<< HEAD
 -- Déchargement des données de la table `tab_codage_suivi`
+=======
+-- Dumping data for table `tab_codage_suivi`
+>>>>>>> 886d5b55be4a8eb7a6634f8455e57d6e66c7b280
 --
 
 INSERT INTO `tab_codage_suivi` (`ID_CS_Suivi`, `Type_CS`) VALUES
@@ -1838,16 +2058,27 @@ INSERT INTO `tab_codage_suivi` (`ID_CS_Suivi`, `Type_CS`) VALUES
 -- --------------------------------------------------------
 
 --
+<<<<<<< HEAD
 -- Structure de la table `tab_codage_type_consultation`
 --
 
+=======
+-- Table structure for table `tab_codage_type_consultation`
+--
+
+DROP TABLE IF EXISTS `tab_codage_type_consultation`;
+>>>>>>> 886d5b55be4a8eb7a6634f8455e57d6e66c7b280
 CREATE TABLE `tab_codage_type_consultation` (
   `Codage` double NOT NULL,
   `Type_consultation` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
+<<<<<<< HEAD
 -- Déchargement des données de la table `tab_codage_type_consultation`
+=======
+-- Dumping data for table `tab_codage_type_consultation`
+>>>>>>> 886d5b55be4a8eb7a6634f8455e57d6e66c7b280
 --
 
 INSERT INTO `tab_codage_type_consultation` (`Codage`, `Type_consultation`) VALUES
@@ -1858,9 +2089,16 @@ INSERT INTO `tab_codage_type_consultation` (`Codage`, `Type_consultation`) VALUE
 -- --------------------------------------------------------
 
 --
+<<<<<<< HEAD
 -- Structure de la table `tab_contacto`
 --
 
+=======
+-- Table structure for table `tab_contacto`
+--
+
+DROP TABLE IF EXISTS `tab_contacto`;
+>>>>>>> 886d5b55be4a8eb7a6634f8455e57d6e66c7b280
 CREATE TABLE `tab_contacto` (
   `N° dossier` varchar(255) NOT NULL,
   `Date` datetime NOT NULL,
@@ -1874,7 +2112,11 @@ CREATE TABLE `tab_contacto` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
+<<<<<<< HEAD
 -- Déchargement des données de la table `tab_contacto`
+=======
+-- Dumping data for table `tab_contacto`
+>>>>>>> 886d5b55be4a8eb7a6634f8455e57d6e66c7b280
 --
 
 INSERT INTO `tab_contacto` (`N° dossier`, `Date`, `Œil`, `Id_lentille`, `Autre_nom_lentille`, `Ro`, `Diamètre`, `Puissance`, `Commentaires`) VALUES
@@ -2182,9 +2424,16 @@ INSERT INTO `tab_contacto` (`N° dossier`, `Date`, `Œil`, `Id_lentille`, `Autre
 -- --------------------------------------------------------
 
 --
+<<<<<<< HEAD
 -- Structure de la table `tab_grossesse`
 --
 
+=======
+-- Table structure for table `tab_grossesse`
+--
+
+DROP TABLE IF EXISTS `tab_grossesse`;
+>>>>>>> 886d5b55be4a8eb7a6634f8455e57d6e66c7b280
 CREATE TABLE `tab_grossesse` (
   `Num_Dossier` varchar(255) NOT NULL,
   `IdGrossesse` double NOT NULL,
@@ -2192,7 +2441,11 @@ CREATE TABLE `tab_grossesse` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
+<<<<<<< HEAD
 -- Déchargement des données de la table `tab_grossesse`
+=======
+-- Dumping data for table `tab_grossesse`
+>>>>>>> 886d5b55be4a8eb7a6634f8455e57d6e66c7b280
 --
 
 INSERT INTO `tab_grossesse` (`Num_Dossier`, `IdGrossesse`, `Annee`) VALUES
@@ -2309,8 +2562,14 @@ INSERT INTO `tab_grossesse` (`Num_Dossier`, `IdGrossesse`, `Annee`) VALUES
 ('477798', 2, 1978);
 
 --
+<<<<<<< HEAD
 -- Déclencheurs `tab_grossesse`
 --
+=======
+-- Triggers `tab_grossesse`
+--
+DROP TRIGGER IF EXISTS `historique_grossesse`;
+>>>>>>> 886d5b55be4a8eb7a6634f8455e57d6e66c7b280
 DELIMITER $$
 CREATE TRIGGER `historique_grossesse` AFTER DELETE ON `tab_grossesse` FOR EACH ROW INSERT INTO history_grossesse (
         History_num_dossier,
@@ -2330,9 +2589,16 @@ DELIMITER ;
 -- --------------------------------------------------------
 
 --
+<<<<<<< HEAD
 -- Structure de la table `tab_patient`
 --
 
+=======
+-- Table structure for table `tab_patient`
+--
+
+DROP TABLE IF EXISTS `tab_patient`;
+>>>>>>> 886d5b55be4a8eb7a6634f8455e57d6e66c7b280
 CREATE TABLE `tab_patient` (
   `Num_dossier` int(255) NOT NULL,
   `Date_debut_suivi` date NOT NULL,
@@ -2357,7 +2623,11 @@ CREATE TABLE `tab_patient` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
+<<<<<<< HEAD
 -- Déchargement des données de la table `tab_patient`
+=======
+-- Dumping data for table `tab_patient`
+>>>>>>> 886d5b55be4a8eb7a6634f8455e57d6e66c7b280
 --
 
 INSERT INTO `tab_patient` (`Num_dossier`, `Date_debut_suivi`, `Nom`, `Pren`, `Adressage`, `Typ_consul`, `Sexe`, `Date_nais`, `CSP`, `Ethnie`, `Com_ou_Pays_nais`, `Annee_dec_KC`, `Lat_man`, `Tabagisme_actif`, `nb_cig_jr`, `Nb_annees`, `Tabagisme_passif`, `Situation_init_KC_OD`, `Situation_init_KC_OG`, `a`) VALUES
@@ -3366,6 +3636,7 @@ INSERT INTO `tab_patient` (`Num_dossier`, `Date_debut_suivi`, `Nom`, `Pren`, `Ad
 -- --------------------------------------------------------
 
 --
+<<<<<<< HEAD
 -- Structure de la table `tab_suivi`
 --
 
@@ -3375,6 +3646,18 @@ CREATE TABLE `tab_suivi` (
   `Num_dossier` varchar(255) NOT NULL,
   `Date` datetime NOT NULL,
   `Signes_Fonctionnels_Details` varchar(255) DEFAULT NULL,
+=======
+-- Table structure for table `tab_suivi`
+--
+
+DROP TABLE IF EXISTS `tab_suivi`;
+CREATE TABLE `tab_suivi` (
+  `ID_suivi` int(11) NOT NULL,
+  `Type_consult` int(11) DEFAULT NULL,
+  `N° dossier` varchar(255) NOT NULL,
+  `Date` datetime NOT NULL,
+  `Signes Fonctionnels - détails` varchar(255) DEFAULT NULL,
+>>>>>>> 886d5b55be4a8eb7a6634f8455e57d6e66c7b280
   `BAVrapide` int(11) DEFAULT NULL,
   `BAVlente` int(11) DEFAULT NULL,
   `Halos_noct` int(11) DEFAULT NULL,
@@ -3386,16 +3669,27 @@ CREATE TABLE `tab_suivi` (
   `Frottement_yeux` int(11) DEFAULT NULL,
   `Port_lentille` int(11) DEFAULT NULL,
   `Adaptation_lentille` int(11) DEFAULT NULL,
+<<<<<<< HEAD
   `Tolerance` int(11) DEFAULT NULL,
+=======
+  `Tolérance` int(11) DEFAULT NULL,
+>>>>>>> 886d5b55be4a8eb7a6634f8455e57d6e66c7b280
   `Nb_hrL_jr` int(11) DEFAULT NULL,
   `Nb_jrL_sem` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
+<<<<<<< HEAD
 -- Déchargement des données de la table `tab_suivi`
 --
 
 INSERT INTO `tab_suivi` (`ID_suivi`, `Type_consult`, `Num_dossier`, `Date`, `Signes_Fonctionnels_Details`, `BAVrapide`, `BAVlente`, `Halos_noct`, `Photophobie`, `Vision_ddblee`, `Rougeurs_ocul`, `Autre`, `Autre_det`, `Frottement_yeux`, `Port_lentille`, `Adaptation_lentille`, `Tolerance`, `Nb_hrL_jr`, `Nb_jrL_sem`) VALUES
+=======
+-- Dumping data for table `tab_suivi`
+--
+
+INSERT INTO `tab_suivi` (`ID_suivi`, `Type_consult`, `N° dossier`, `Date`, `Signes Fonctionnels - détails`, `BAVrapide`, `BAVlente`, `Halos_noct`, `Photophobie`, `Vision_ddblee`, `Rougeurs_ocul`, `Autre`, `Autre_det`, `Frottement_yeux`, `Port_lentille`, `Adaptation_lentille`, `Tolérance`, `Nb_hrL_jr`, `Nb_jrL_sem`) VALUES
+>>>>>>> 886d5b55be4a8eb7a6634f8455e57d6e66c7b280
 (1, 0, '01.16117', '2012-04-06 00:00:00', 'RAS', 0, 0, 0, 0, 0, 0, 0, '', 0, 0, 0, 0, 0, 0),
 (2, 0, '192099', '2010-02-01 00:00:00', '', 0, 0, 0, 0, 0, 0, 0, '', 0, 0, 0, 0, 0, 0),
 (3, 0, '113319', '2011-07-06 00:00:00', 'RAS', 0, 0, 0, 0, 0, 0, 0, '', 0, 0, 0, 0, 0, 0),
@@ -3878,7 +4172,11 @@ INSERT INTO `tab_suivi` (`ID_suivi`, `Type_consult`, `Num_dossier`, `Date`, `Sig
 (515, 0, '08.3672', '0000-00-00 00:00:00', 'RAS', 0, 0, 0, 0, 0, 0, 0, '', 0, 0, 0, 0, 0, 0),
 (516, 0, '08.3746', '0000-00-00 00:00:00', '', 0, -1, 0, 0, 0, 0, -1, 'céphalée, brûlures', 0, 0, 0, 0, 0, 0),
 (517, 0, '08.3753', '0000-00-00 00:00:00', 'halos, photophobie', 0, 0, -1, -1, 0, 0, 0, '', 0, 0, 0, 0, 0, 0);
+<<<<<<< HEAD
 INSERT INTO `tab_suivi` (`ID_suivi`, `Type_consult`, `Num_dossier`, `Date`, `Signes_Fonctionnels_Details`, `BAVrapide`, `BAVlente`, `Halos_noct`, `Photophobie`, `Vision_ddblee`, `Rougeurs_ocul`, `Autre`, `Autre_det`, `Frottement_yeux`, `Port_lentille`, `Adaptation_lentille`, `Tolerance`, `Nb_hrL_jr`, `Nb_jrL_sem`) VALUES
+=======
+INSERT INTO `tab_suivi` (`ID_suivi`, `Type_consult`, `N° dossier`, `Date`, `Signes Fonctionnels - détails`, `BAVrapide`, `BAVlente`, `Halos_noct`, `Photophobie`, `Vision_ddblee`, `Rougeurs_ocul`, `Autre`, `Autre_det`, `Frottement_yeux`, `Port_lentille`, `Adaptation_lentille`, `Tolérance`, `Nb_hrL_jr`, `Nb_jrL_sem`) VALUES
+>>>>>>> 886d5b55be4a8eb7a6634f8455e57d6e66c7b280
 (518, 0, '113298', '0000-00-00 00:00:00', 'BAV lente, photophie', 0, -1, 0, -1, 0, 0, 0, '', 0, 0, 0, 0, 0, 0),
 (519, 0, '08.3793', '0000-00-00 00:00:00', 'BAV lente, brûlures', 0, -1, 0, 0, 0, 0, 0, '', 0, 0, 0, 0, 0, 0),
 (520, 0, '08.3794', '0000-00-00 00:00:00', 'BAV lente, prurit', 0, -1, 0, 0, 0, 0, 0, '', 1, 0, 0, 0, 0, 0),
@@ -4390,7 +4688,11 @@ INSERT INTO `tab_suivi` (`ID_suivi`, `Type_consult`, `Num_dossier`, `Date`, `Sig
 (1097, 0, '161650', '0000-00-00 00:00:00', '', 0, 0, 0, 0, 0, 0, 0, '', 0, 1, 0, 0, 0, 0),
 (1098, 0, '161677', '0000-00-00 00:00:00', '', 0, 0, 0, 0, 0, 0, 0, '', 0, 0, 0, 0, 0, 0),
 (1099, 1, '161677', '0000-00-00 00:00:00', '', 0, 0, 0, 0, 0, 0, 0, '', 0, 0, 0, 0, 0, 0);
+<<<<<<< HEAD
 INSERT INTO `tab_suivi` (`ID_suivi`, `Type_consult`, `Num_dossier`, `Date`, `Signes_Fonctionnels_Details`, `BAVrapide`, `BAVlente`, `Halos_noct`, `Photophobie`, `Vision_ddblee`, `Rougeurs_ocul`, `Autre`, `Autre_det`, `Frottement_yeux`, `Port_lentille`, `Adaptation_lentille`, `Tolerance`, `Nb_hrL_jr`, `Nb_jrL_sem`) VALUES
+=======
+INSERT INTO `tab_suivi` (`ID_suivi`, `Type_consult`, `N° dossier`, `Date`, `Signes Fonctionnels - détails`, `BAVrapide`, `BAVlente`, `Halos_noct`, `Photophobie`, `Vision_ddblee`, `Rougeurs_ocul`, `Autre`, `Autre_det`, `Frottement_yeux`, `Port_lentille`, `Adaptation_lentille`, `Tolérance`, `Nb_hrL_jr`, `Nb_jrL_sem`) VALUES
+>>>>>>> 886d5b55be4a8eb7a6634f8455e57d6e66c7b280
 (1100, 0, '162758', '0000-00-00 00:00:00', '', 0, -1, -1, -1, 0, 0, -1, 'douleurs, diplopie OG, prurit', 0, 0, 0, 0, 0, 0),
 (1102, 0, '163063', '0000-00-00 00:00:00', '', 0, -1, -1, -1, 0, 0, -1, 'douleurs, diplopie, prurit', 0, 1, 0, 0, 0, 0),
 (1103, 0, '163953', '0000-00-00 00:00:00', '', 0, -1, 0, 0, 0, 0, -1, 'brûlures, prurit', 0, 0, 0, 0, 0, 0),
@@ -4906,7 +5208,11 @@ INSERT INTO `tab_suivi` (`ID_suivi`, `Type_consult`, `Num_dossier`, `Date`, `Sig
 (1638, 1, '156986', '0000-00-00 00:00:00', '', 0, 0, 0, 0, 0, 0, 0, '', 0, 0, 0, 0, 0, 0),
 (1639, 1, '262732', '0000-00-00 00:00:00', '', 0, 0, -1, 0, 0, 0, 0, '', 1, 0, 0, 0, 0, 0),
 (1640, 1, '262732', '2002-10-10 00:00:00', '', 0, 0, -1, 0, 0, 0, 0, '', 0, 0, 0, 0, 0, 0);
+<<<<<<< HEAD
 INSERT INTO `tab_suivi` (`ID_suivi`, `Type_consult`, `Num_dossier`, `Date`, `Signes_Fonctionnels_Details`, `BAVrapide`, `BAVlente`, `Halos_noct`, `Photophobie`, `Vision_ddblee`, `Rougeurs_ocul`, `Autre`, `Autre_det`, `Frottement_yeux`, `Port_lentille`, `Adaptation_lentille`, `Tolerance`, `Nb_hrL_jr`, `Nb_jrL_sem`) VALUES
+=======
+INSERT INTO `tab_suivi` (`ID_suivi`, `Type_consult`, `N° dossier`, `Date`, `Signes Fonctionnels - détails`, `BAVrapide`, `BAVlente`, `Halos_noct`, `Photophobie`, `Vision_ddblee`, `Rougeurs_ocul`, `Autre`, `Autre_det`, `Frottement_yeux`, `Port_lentille`, `Adaptation_lentille`, `Tolérance`, `Nb_hrL_jr`, `Nb_jrL_sem`) VALUES
+>>>>>>> 886d5b55be4a8eb7a6634f8455e57d6e66c7b280
 (1641, 1, '379053', '0000-00-00 00:00:00', '', 0, 0, 0, 0, 0, 0, 0, '', 1, 0, 0, 0, 0, 0),
 (1644, 1, '179930', '0000-00-00 00:00:00', '', 0, 0, -1, 0, 0, 0, 0, '', 0, 0, 0, 0, 0, 0),
 (1645, 1, '326963', '0000-00-00 00:00:00', '', 0, 0, -1, -1, -1, 0, 0, '', 2, 0, 0, 0, 0, 0),
@@ -5379,6 +5685,7 @@ INSERT INTO `tab_suivi` (`ID_suivi`, `Type_consult`, `Num_dossier`, `Date`, `Sig
 (2149, 1, '397671', '0000-00-00 00:00:00', '', -1, 0, -1, 0, 0, 0, -1, 'gêne à la conduite', 1, 0, 0, 0, 0, 0),
 (2150, 0, '227940', '2005-07-09 00:00:00', '', 0, 0, 0, 0, 0, 0, 0, '', 0, 0, 0, 0, 0, 0),
 (2151, 1, '412491', '0000-00-00 00:00:00', '', 0, -1, -1, -1, -1, 0, -1, 'BAV suite décollement rétinien ++, images déformées ODG, anisométropie', 0, 1, 0, 1, 24, 7),
+<<<<<<< HEAD
 (2153, 0, '483405', '2009-09-08 00:00:00', '', 0, -1, -1, -1, 0, 0, -1, 'céphalée', 0, 0, 0, 0, 0, 0),
 (12563, 0, '10568', '2017-12-22 21:41:00', 'pas plus', 0, 0, 1, 1, 0, 1, 1, 'non', 1, 0, NULL, 3, 7, 4);
 
@@ -5388,6 +5695,16 @@ INSERT INTO `tab_suivi` (`ID_suivi`, `Type_consult`, `Num_dossier`, `Date`, `Sig
 
 --
 -- Index pour la table `tab_atcdperso`
+=======
+(2153, 0, '483405', '2009-09-08 00:00:00', '', 0, -1, -1, -1, 0, 0, -1, 'céphalée', 0, 0, 0, 0, 0, 0);
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `tab_atcdperso`
+>>>>>>> 886d5b55be4a8eb7a6634f8455e57d6e66c7b280
 --
 ALTER TABLE `tab_atcdperso`
   ADD PRIMARY KEY (`ID_ATCD`),
@@ -5395,7 +5712,11 @@ ALTER TABLE `tab_atcdperso`
   ADD KEY `Num_Type` (`Num_Type`);
 
 --
+<<<<<<< HEAD
 -- Index pour la table `tab_atcd_famil`
+=======
+-- Indexes for table `tab_atcd_famil`
+>>>>>>> 886d5b55be4a8eb7a6634f8455e57d6e66c7b280
 --
 ALTER TABLE `tab_atcd_famil`
   ADD PRIMARY KEY (`Id_ATCD fam`),
@@ -5404,7 +5725,11 @@ ALTER TABLE `tab_atcd_famil`
   ADD KEY `TAB_Codage_parenteTAB_ATCD_famil` (`Codage parente`);
 
 --
+<<<<<<< HEAD
 -- Index pour la table `tab_chirurgie`
+=======
+-- Indexes for table `tab_chirurgie`
+>>>>>>> 886d5b55be4a8eb7a6634f8455e57d6e66c7b280
 --
 ALTER TABLE `tab_chirurgie`
   ADD PRIMARY KEY (`ID_Chirurgie`),
@@ -5412,99 +5737,159 @@ ALTER TABLE `tab_chirurgie`
   ADD KEY `N° dossier` (`NumDossier`);
 
 --
+<<<<<<< HEAD
 -- Index pour la table `tab_codage_adaptation`
+=======
+-- Indexes for table `tab_codage_adaptation`
+>>>>>>> 886d5b55be4a8eb7a6634f8455e57d6e66c7b280
 --
 ALTER TABLE `tab_codage_adaptation`
   ADD PRIMARY KEY (`Code_CS_Adaptation`),
   ADD KEY `Code_CS_Contacto` (`Code_CS_Adaptation`);
 
 --
+<<<<<<< HEAD
 -- Index pour la table `tab_codage_adressage`
+=======
+-- Indexes for table `tab_codage_adressage`
+>>>>>>> 886d5b55be4a8eb7a6634f8455e57d6e66c7b280
 --
 ALTER TABLE `tab_codage_adressage`
   ADD PRIMARY KEY (`Codage`),
   ADD KEY `TAB_Codage_adressageAdressage` (`Adressage`);
 
 --
+<<<<<<< HEAD
 -- Index pour la table `tab_codage_atcd`
+=======
+-- Indexes for table `tab_codage_atcd`
+>>>>>>> 886d5b55be4a8eb7a6634f8455e57d6e66c7b280
 --
 ALTER TABLE `tab_codage_atcd`
   ADD PRIMARY KEY (`Num_atcd`),
   ADD KEY `TAB_Codage_CatATCDTAB_Codage_ATCD` (`ID_Categorie_ATCD`);
 
 --
+<<<<<<< HEAD
 -- Index pour la table `tab_codage_atcd_famil`
+=======
+-- Indexes for table `tab_codage_atcd_famil`
+>>>>>>> 886d5b55be4a8eb7a6634f8455e57d6e66c7b280
 --
 ALTER TABLE `tab_codage_atcd_famil`
   ADD PRIMARY KEY (`Code`);
 
 --
+<<<<<<< HEAD
 -- Index pour la table `tab_codage_catatcd`
+=======
+-- Indexes for table `tab_codage_catatcd`
+>>>>>>> 886d5b55be4a8eb7a6634f8455e57d6e66c7b280
 --
 ALTER TABLE `tab_codage_catatcd`
   ADD PRIMARY KEY (`ID_categorie_ATCD`);
 
 --
+<<<<<<< HEAD
 -- Index pour la table `tab_codage_chirurgie`
+=======
+-- Indexes for table `tab_codage_chirurgie`
+>>>>>>> 886d5b55be4a8eb7a6634f8455e57d6e66c7b280
 --
 ALTER TABLE `tab_codage_chirurgie`
   ADD PRIMARY KEY (`Code`);
 
 --
+<<<<<<< HEAD
 -- Index pour la table `tab_codage_csp`
+=======
+-- Indexes for table `tab_codage_csp`
+>>>>>>> 886d5b55be4a8eb7a6634f8455e57d6e66c7b280
 --
 ALTER TABLE `tab_codage_csp`
   ADD PRIMARY KEY (`Code`),
   ADD KEY `TAB_Codage_CSPCSP` (`CSP`);
 
 --
+<<<<<<< HEAD
 -- Index pour la table `tab_codage_ethnie`
+=======
+-- Indexes for table `tab_codage_ethnie`
+>>>>>>> 886d5b55be4a8eb7a6634f8455e57d6e66c7b280
 --
 ALTER TABLE `tab_codage_ethnie`
   ADD PRIMARY KEY (`Code_ethnie`),
   ADD KEY `TAB_Codage_EthnieEthnie` (`Ethnie`);
 
 --
+<<<<<<< HEAD
 -- Index pour la table `tab_codage_frottement_oculaire`
+=======
+-- Indexes for table `tab_codage_frottement_oculaire`
+>>>>>>> 886d5b55be4a8eb7a6634f8455e57d6e66c7b280
 --
 ALTER TABLE `tab_codage_frottement_oculaire`
   ADD PRIMARY KEY (`Code_Frottement`),
   ADD KEY `Code_Frottement` (`Code_Frottement`);
 
 --
+<<<<<<< HEAD
 -- Index pour la table `tab_codage_lateralite_manuelle`
+=======
+-- Indexes for table `tab_codage_lateralite_manuelle`
+>>>>>>> 886d5b55be4a8eb7a6634f8455e57d6e66c7b280
 --
 ALTER TABLE `tab_codage_lateralite_manuelle`
   ADD PRIMARY KEY (`Code-Lateralite`),
   ADD KEY `Code-Lateralite` (`Code-Lateralite`);
 
 --
+<<<<<<< HEAD
 -- Index pour la table `tab_codage_nom_lentilles`
+=======
+-- Indexes for table `tab_codage_nom_lentilles`
+>>>>>>> 886d5b55be4a8eb7a6634f8455e57d6e66c7b280
 --
 ALTER TABLE `tab_codage_nom_lentilles`
   ADD PRIMARY KEY (`Id_lentille`),
   ADD KEY `Num_auto1` (`Id_lentille`);
 
 --
+<<<<<<< HEAD
 -- Index pour la table `tab_codage_parente`
+=======
+-- Indexes for table `tab_codage_parente`
+>>>>>>> 886d5b55be4a8eb7a6634f8455e57d6e66c7b280
 --
 ALTER TABLE `tab_codage_parente`
   ADD PRIMARY KEY (`Code`);
 
 --
+<<<<<<< HEAD
 -- Index pour la table `tab_codage_suivi`
+=======
+-- Indexes for table `tab_codage_suivi`
+>>>>>>> 886d5b55be4a8eb7a6634f8455e57d6e66c7b280
 --
 ALTER TABLE `tab_codage_suivi`
   ADD PRIMARY KEY (`ID_CS_Suivi`);
 
 --
+<<<<<<< HEAD
 -- Index pour la table `tab_codage_type_consultation`
+=======
+-- Indexes for table `tab_codage_type_consultation`
+>>>>>>> 886d5b55be4a8eb7a6634f8455e57d6e66c7b280
 --
 ALTER TABLE `tab_codage_type_consultation`
   ADD PRIMARY KEY (`Codage`);
 
 --
+<<<<<<< HEAD
 -- Index pour la table `tab_contacto`
+=======
+-- Indexes for table `tab_contacto`
+>>>>>>> 886d5b55be4a8eb7a6634f8455e57d6e66c7b280
 --
 ALTER TABLE `tab_contacto`
   ADD PRIMARY KEY (`N° dossier`,`Date`,`Œil`),
@@ -5512,14 +5897,22 @@ ALTER TABLE `tab_contacto`
   ADD KEY `TAB_Nom_lentillesTAB_contacto` (`Id_lentille`);
 
 --
+<<<<<<< HEAD
 -- Index pour la table `tab_grossesse`
+=======
+-- Indexes for table `tab_grossesse`
+>>>>>>> 886d5b55be4a8eb7a6634f8455e57d6e66c7b280
 --
 ALTER TABLE `tab_grossesse`
   ADD PRIMARY KEY (`Num_Dossier`,`IdGrossesse`),
   ADD KEY `Num_Dossier` (`Num_Dossier`);
 
 --
+<<<<<<< HEAD
 -- Index pour la table `tab_patient`
+=======
+-- Indexes for table `tab_patient`
+>>>>>>> 886d5b55be4a8eb7a6634f8455e57d6e66c7b280
 --
 ALTER TABLE `tab_patient`
   ADD PRIMARY KEY (`Num_dossier`),
@@ -5530,16 +5923,25 @@ ALTER TABLE `tab_patient`
   ADD KEY `TAB_Codage_Type_ConsultationTAB_patient` (`Typ_consul`);
 
 --
+<<<<<<< HEAD
 -- Index pour la table `tab_suivi`
 --
 ALTER TABLE `tab_suivi`
   ADD PRIMARY KEY (`ID_suivi`),
   ADD KEY `N° dossier` (`Num_dossier`),
+=======
+-- Indexes for table `tab_suivi`
+--
+ALTER TABLE `tab_suivi`
+  ADD PRIMARY KEY (`ID_suivi`),
+  ADD KEY `N° dossier` (`N° dossier`),
+>>>>>>> 886d5b55be4a8eb7a6634f8455e57d6e66c7b280
   ADD KEY `TAB_Codage_Adaptation_ContactoTAB_Suivi` (`Adaptation_lentille`),
   ADD KEY `TAB_Codage_Frottement_oculaireTAB_Suivi` (`Frottement_yeux`),
   ADD KEY `TAB_Codage_SuiviTAB_Suivi` (`Type_consult`);
 
 --
+<<<<<<< HEAD
 -- AUTO_INCREMENT pour les tables déchargées
 --
 
@@ -5586,6 +5988,46 @@ ALTER TABLE `tab_suivi`
   MODIFY `ID_suivi` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12564;
 COMMIT;
 
+=======
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `tab_atcdperso`
+--
+ALTER TABLE `tab_atcdperso`
+  MODIFY `ID_ATCD` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=505;
+--
+-- AUTO_INCREMENT for table `tab_atcd_famil`
+--
+ALTER TABLE `tab_atcd_famil`
+  MODIFY `Id_ATCD fam` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=323;
+--
+-- AUTO_INCREMENT for table `tab_chirurgie`
+--
+ALTER TABLE `tab_chirurgie`
+  MODIFY `ID_Chirurgie` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=610;
+--
+-- AUTO_INCREMENT for table `tab_codage_atcd`
+--
+ALTER TABLE `tab_codage_atcd`
+  MODIFY `Num_atcd` double NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+--
+-- AUTO_INCREMENT for table `tab_codage_nom_lentilles`
+--
+ALTER TABLE `tab_codage_nom_lentilles`
+  MODIFY `Id_lentille` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=60;
+--
+-- AUTO_INCREMENT for table `tab_patient`
+--
+ALTER TABLE `tab_patient`
+  MODIFY `Num_dossier` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=809155;
+--
+-- AUTO_INCREMENT for table `tab_suivi`
+--
+ALTER TABLE `tab_suivi`
+  MODIFY `ID_suivi` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2154;
+>>>>>>> 886d5b55be4a8eb7a6634f8455e57d6e66c7b280
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

@@ -16,7 +16,7 @@ if (isset($_POST['cleGrossesse'])){
 if (isset($_POST['newGrossesse'])){
     if(ctype_digit ($_POST['newGrossesse'])){
         try{
-           $bdd = new PDO('mysql:host=localhost;dbname=kc', 'root', 'root', 	array(PDO::ATTR_ERRMODE => 	PDO::ERRMODE_EXCEPTION));
+           $bdd = new PDO('mysql:host=localhost;dbname=kc', 'root', '', 	array(PDO::ATTR_ERRMODE => 	PDO::ERRMODE_EXCEPTION));
             $reqMaxIdGrosesse = "SELECT max(idGrossesse) FROM tab_grossesse WHERE Num_Dossier = '".$_SESSION['numpat']."';";
             $resultatMaxId=$bdd->query($reqMaxIdGrosesse);
             $ligne = $resultatMaxId->fetch();

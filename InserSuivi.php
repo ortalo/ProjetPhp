@@ -40,7 +40,7 @@ $adaptLent = $_POST['adaptLent'];
 $nbHrJrLent = $_POST['nbHrJrLent'];
 $nbJrSemLent = $_POST['nbJrSemLent'];
 
-$reqInsSuiv= "insert INTO tab_suivi(ID_suivi, Type_consult, Num_dossier,Date, Signes_Fonctionnels_Details, BAVrapide, BAVLente, Halos_noct, Photophobie, Vision_ddblee, Rougeurs_ocul, Autre, Autre_det, Frottement_yeux, Port_lentille, Tolerance, Nb_hrL_jr, Nb_jrL_sem) VALUES (".$iDSuivi.", ".$typCs.", '".$numDoss."', '".$date."', '".$sFdet."', ".$bAVRpd.", ".$bAVLente.", ".$halNoct.", ".$photoph.", ".$visDoubl.", ".$rougOcul.", ".$autrSFOc.", '".$autreDet."', ".$frotYx.", ".$portLent.", ".$adaptLent.", ".$nbHrJrLent.", ".$nbJrSemLent.");";
+$reqInsSuiv= "INSERT INTO tab_suivi(ID_suivi, Type_consult, Num_dossier, Date, Signes_Fonctionnels_Details, BAVrapide, BAVLente, Halos_noct, Photophobie, Vision_ddblee, Rougeurs_ocul, Autre, Autre_det, Frottement_yeux, Port_lentille, Tolerance, Nb_hrL_jr, Nb_jrL_sem) VALUES (".$iDSuivi.", ".$typCs.", '".$numDoss."', '".$date."', '".$sFdet."', ".$bAVRpd.", ".$bAVLente.", ".$halNoct.", ".$photoph.", ".$visDoubl.", ".$rougOcul.", ".$autrSFOc.", '".$autreDet."', ".$frotYx.", ".$portLent.", ".$adaptLent.", ".$nbHrJrLent.", ".$nbJrSemLent.");";
 
 $bdd->query($reqInsSuiv);
 

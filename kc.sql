@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le :  Dim 24 déc. 2017 à 18:23
+-- Généré le :  Dim 24 déc. 2017 à 19:06
 -- Version du serveur :  10.1.28-MariaDB
 -- Version de PHP :  7.1.10
 
@@ -67,6 +67,42 @@ CREATE TABLE `history_grossesse` (
 INSERT INTO `history_grossesse` (`History_num_dossier`, `History_IdGrossesse`, `History_annee`, `History_date_modif`, `History_action`) VALUES
 (100830, 2, 1999, '2017-12-22 00:00:00', 'deleted'),
 (128067, 3, 1992, '2017-12-22 14:35:03', 'deleted');
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `histo_ajout_suivi`
+--
+
+CREATE TABLE `histo_ajout_suivi` (
+  `New.ID_suivi` int(11) NOT NULL,
+  `New.Type_consult` int(11) DEFAULT NULL,
+  `New.Num_dossier` varchar(255) NOT NULL,
+  `New.Date` datetime NOT NULL,
+  `New.Signes_Fonctionnels_Details` varchar(255) DEFAULT NULL,
+  `New.BAVrapide` int(11) DEFAULT NULL,
+  `New.BAVlente` int(11) DEFAULT NULL,
+  `New.Halos_noct` int(11) DEFAULT NULL,
+  `New.Photophobie` int(11) DEFAULT NULL,
+  `New.Vision_ddblee` int(11) DEFAULT NULL,
+  `New.Rougeurs_ocul` int(11) DEFAULT NULL,
+  `New.Autre` int(11) DEFAULT NULL,
+  `New.Autre_det` varchar(255) DEFAULT NULL,
+  `New.Frottement_yeux` int(11) DEFAULT NULL,
+  `New.Port_lentille` int(11) DEFAULT NULL,
+  `New.Adaptation_lentille` int(11) DEFAULT NULL,
+  `New.Tolerance` int(11) DEFAULT NULL,
+  `New.Nb_hrL_jr` int(11) DEFAULT NULL,
+  `New.Nb_jrL_sem` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Déchargement des données de la table `histo_ajout_suivi`
+--
+
+INSERT INTO `histo_ajout_suivi` (`New.ID_suivi`, `New.Type_consult`, `New.Num_dossier`, `New.Date`, `New.Signes_Fonctionnels_Details`, `New.BAVrapide`, `New.BAVlente`, `New.Halos_noct`, `New.Photophobie`, `New.Vision_ddblee`, `New.Rougeurs_ocul`, `New.Autre`, `New.Autre_det`, `New.Frottement_yeux`, `New.Port_lentille`, `New.Adaptation_lentille`, `New.Tolerance`, `New.Nb_hrL_jr`, `New.Nb_jrL_sem`) VALUES
+(89968, 1, '828782', '2017-11-20 16:12:00', 'autre', 1, 1, 1, 1, 1, 1, 1, 'null', 1, 1, NULL, 0, 3, 2),
+(289968, 1, '328782', '2017-11-22 16:12:00', 'autre', 1, 1, 1, 1, 1, 1, 1, 'null', 1, 1, NULL, 0, 3, 2);
 
 -- --------------------------------------------------------
 
@@ -5380,7 +5416,20 @@ INSERT INTO `tab_suivi` (`ID_suivi`, `Type_consult`, `Num_dossier`, `Date`, `Sig
 (2150, 0, '227940', '2005-07-09 00:00:00', '', 0, 0, 0, 0, 0, 0, 0, '', 0, 0, 0, 0, 0, 0),
 (2151, 1, '412491', '0000-00-00 00:00:00', '', 0, -1, -1, -1, -1, 0, -1, 'BAV suite décollement rétinien ++, images déformées ODG, anisométropie', 0, 1, 0, 1, 24, 7),
 (2153, 0, '483405', '2009-09-08 00:00:00', '', 0, -1, -1, -1, 0, 0, -1, 'céphalée', 0, 0, 0, 0, 0, 0),
-(89967, 1, '828783', '2017-11-20 16:12:00', 'autre', 1, 1, 1, 1, 1, 1, 1, 'null', 1, 1, NULL, 0, 3, 2);
+(89967, 1, '828783', '2017-11-20 16:12:00', 'autre', 1, 1, 1, 1, 1, 1, 1, 'null', 1, 1, NULL, 0, 3, 2),
+(89968, 1, '828782', '2017-11-20 16:12:00', 'autre', 1, 1, 1, 1, 1, 1, 1, 'null', 1, 1, NULL, 0, 3, 2),
+(289968, 1, '328782', '2017-11-22 16:12:00', 'autre', 1, 1, 1, 1, 1, 1, 1, 'null', 1, 1, NULL, 0, 3, 2);
+
+--
+-- Déclencheurs `tab_suivi`
+--
+DELIMITER $$
+CREATE TRIGGER `Historique_ajout_donnees_suivi` BEFORE INSERT ON `tab_suivi` FOR EACH ROW BEGIN
+INSERT INTO histo_ajout_suivi
+VALUES (New.ID_suivi, New.Type_consult, New.Num_dossier, New.Date, New.Signes_Fonctionnels_Details, New.BAVrapide, New.BAVlente, New.Halos_noct, New.Photophobie, New.Vision_ddblee, New.Rougeurs_ocul, New.Autre, New.Autre_det, New.Frottement_yeux, New.Port_lentille, New.Adaptation_lentille, New.Tolerance, New.Nb_hrL_jr, New.Nb_jrL_sem);
+END
+$$
+DELIMITER ;
 
 --
 -- Index pour les tables déchargées
@@ -5583,7 +5632,7 @@ ALTER TABLE `tab_patient`
 -- AUTO_INCREMENT pour la table `tab_suivi`
 --
 ALTER TABLE `tab_suivi`
-  MODIFY `ID_suivi` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=89968;
+  MODIFY `ID_suivi` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=289969;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

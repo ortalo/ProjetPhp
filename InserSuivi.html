@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" type="text/css" href="projet_phase2.css">
+<title>Formulaire insertion données de suivi</title>
+</head>
+<body>
+<form method="post" action="InserSuivi.php">
+
+<strong><h2> Vous pouvez renseigner ci-après les informations concernant  </h2></strong>
+
+<label> Numéro de dossier : </label>  <input type="text" name="numDoss"/><br/><br/>
+<label> Identifiant de suivi : </label>  <input type="number" name="iDSuivi"  /><br/><br/>
+<label> Date du jour : </label>  <input type="datetime-local" name="date"/><br/><br/>
+<h4>Le type de consultation doit être compris entre 0 et 3 inclus<br/></h4>
+<label> Type de consultation (0 à 3) : </label>  <input type="text" name="typCs"/><br/><br/>
+<label> Signes fonctionnels (details) : </label>  <input type="text" name="sFdet"/><br/><br/>
+<label> Baisse d'acuite visuelle rapide (min si non, max si oui) : </label>  <input type="range" name="bAVRpd" min="0" max="1"/><br/><br/>
+<label> Baisse d'acuite visuelle lente (min si non, max si oui) : </label>  <input type="range" name="bAVLente" min="0" max="1"/><br/><br/>
+<label> Halos nocturnes (min si non, max si oui) : </label>  <input type="range" name="halNoct" min="0" max="1"/><br/><br/>
+<label> Photophobie (min si non, max si oui) : </label>  <input type="range" name="photoph" min="0" max="1"/><br/><br/>
+<label> Vision dedoublee (min si non, max si oui) : </label>  <input type="range" name="visDoubl" min="0" max="1"/><br/><br/>
+<label> Rougeurs oculaires (min si non, max si oui) : </label>  <input type="range" name="rougOcul" min="0" max="1"/><br/><br/>
+<label> Autres signes fonctionnels oculaires (min si non, max si oui) : </label>  <input type="range" name="autrSFOc" min="0" max="1"/><br/><br/>
+<label> Autres details : </label>  <input type="text" name="autreDet"/><br/><br/>
+<label> Frottements des yeux (min si non, max si oui) : </label>  <input type="range" name="frotYx" min="0" max="1"/><br/><br/>
+<label> Port de lentilles (min si non, max si oui) : </label>  <input type="range" name="portLent" min="0" max="1"/><br/><br/>
+<label> Adaptation lentilles : </label>   <input type="number" name="adaptLent"  /><br/><br/>
+<label> Nombre d'heures de port de lentilles par jour : </label>   <input type="number" name="nbHrJrLent"  /><br/><br/>
+<label> Nombre de jour de port de lentilles par semaine : </label>   <input type="number" name="nbJrSemLent"  /><br/><br/>
+
+<input TYPE="submit" NAME="nom" VALUE="envoyer">
+   
+</body>
+</html>

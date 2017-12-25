@@ -1,18 +1,20 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <link rel="stylesheet" type="text/css" href="projet_phase2.css">
-<title>Sélection Patient à Modifier</title>
+<title>Sélection code adressage à modifier</title>
 </head>
 <body>
 
 
-<form method="post" action="ModSelecPat.php">
+<form method="post" action="ModifAdress.php">
 
-	<h1>Selection du patient a modifier<br/></h1>
+	<h1>Code d'adressage à modifier ?<br/><br/></h1>
+	<h4>Le code doit être compris entre 0 et 2 inclus <br/></h4>
 
-	<label> Numero Patient : </label>  <input type="text" name="Numpat"  />
+	<label> Code d'adressage à ajouter à la base : </label>  <input type="text" name="codeAdrUpd"  />
 	
 	<input TYPE="submit" NAME="nom" VALUE="envoyer">
 

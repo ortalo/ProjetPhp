@@ -1,7 +1,7 @@
 <?php session_start(); 
 if (isset($_POST['cleGrossesse'])){
     try{
-	   $bdd = new PDO('mysql:host=localhost;dbname=kc', 'root', 'root', 	array(PDO::ATTR_ERRMODE => 	PDO::ERRMODE_EXCEPTION));
+	   $bdd = new PDO('mysql:host=localhost;dbname=kc', 'root', '', 	array(PDO::ATTR_ERRMODE => 	PDO::ERRMODE_EXCEPTION));
         foreach($_POST['cleGrossesse'] as $cle){
             $dossierAndGrossesse = explode(',', $cle);
             $req= " delete FROM tab_grossesse WHERE (Num_Dossier =".$dossierAndGrossesse[0]." and idGrossesse =".$dossierAndGrossesse[1].");";
@@ -9,27 +9,32 @@ if (isset($_POST['cleGrossesse'])){
     }
     
     }catch (Exception $e){
+        echo " delete FROM tab_grossesse WHERE (Num_Dossier =".$dossierAndGrossesse[0]." and idGrossesse =".$dossierAndGrossesse[1].");";
         die('Erreur : ' . $e->getMessage());
     }
 }
 if (isset($_POST['newGrossesse'])){
-    try{
-	   $bdd = new PDO('mysql:host=localhost;dbname=kc', 'root', 'root', 	array(PDO::ATTR_ERRMODE => 	PDO::ERRMODE_EXCEPTION));
-        $reqMaxIdGrosesse = "SELECT max(idGrossesse) FROM tab_grossesse WHERE Num_Dossier = '".$_SESSION['numpat']."';";
-        $resultatMaxId=$bdd->query($reqMaxIdGrosesse);
-        $ligne = $resultatMaxId->fetch();
-        $maxIdGrossesse=$ligne[0];
-        if($maxIdGrossesse == 'null'){$maxIdGrossesse='0';}
-        
-        $intMaxIdGrossesse = (int)$maxIdGrossesse;
-        $intMaxIdGrossesse++;
-        $maxIdGrossesse = (string)$intMaxIdGrossesse;
-        
-        $req= "INSERT INTO `tab_grossesse` (`Num_Dossier`, `IdGrossesse`, `Année`) VALUES ('".$_SESSION['numpat']."', '".$maxIdGrossesse."', '".$_POST['newGrossesse']."');";
- 		$bdd->query($req);
-    
-    }catch (Exception $e){
-        die('Erreur : ' . $e->getMessage());
+    if(ctype_digit ($_POST['newGrossesse']) && strlen ( $_POST['newGrossesse'])==4 ){
+        try{
+           $bdd = new PDO('mysql:host=localhost;dbname=kc', 'root', '', 	array(PDO::ATTR_ERRMODE => 	PDO::ERRMODE_EXCEPTION));
+            $reqMaxIdGrosesse = "SELECT max(idGrossesse) FROM tab_grossesse WHERE Num_Dossier = '".$_SESSION['numpat']."';";
+            $resultatMaxId=$bdd->query($reqMaxIdGrosesse);
+            $ligne = $resultatMaxId->fetch();
+            $maxIdGrossesse=$ligne[0];
+            if($maxIdGrossesse == 'null'){$maxIdGrossesse='0';}
+
+            $intMaxIdGrossesse = (int)$maxIdGrossesse;
+            $intMaxIdGrossesse++;
+            $maxIdGrossesse = (string)$intMaxIdGrossesse;
+
+            $req= "INSERT INTO `tab_grossesse` (`Num_Dossier`, `IdGrossesse`, `Annee`) VALUES ('".$_SESSION['numpat']."', '".$maxIdGrossesse."', '".$_POST['newGrossesse']."');";
+            $bdd->query($req);
+
+        }catch (Exception $e){
+            die('Erreur : ' . $e->getMessage());
+        }
+    }else{
+        echo 'Veuillez entrer seulement 4 caractères numeriques pour renseigner une année';
     }
 }
 ?>
@@ -47,8 +52,8 @@ if (isset($_POST['newGrossesse'])){
 <?php
 try
 {
-	$bdd = new PDO('mysql:host=localhost;dbname=kc', 'root', 'root', 	array(PDO::ATTR_ERRMODE => 	PDO::ERRMODE_EXCEPTION));
-    $resultat=$bdd->query("SELECT Num_Dossier, idGrossesse, Année FROM tab_grossesse WHERE Num_Dossier = '".$_SESSION['numpat']."';");
+	$bdd = new PDO('mysql:host=localhost;dbname=kc', 'root', '', 	array(PDO::ATTR_ERRMODE => 	PDO::ERRMODE_EXCEPTION));
+    $resultat=$bdd->query("SELECT Num_Dossier, idGrossesse, Annee FROM tab_grossesse WHERE Num_Dossier = '".$_SESSION['numpat']."';");
     
     while ($ligne = $resultat->fetch()){ 
 
@@ -73,7 +78,8 @@ catch (Exception $e)
   <input type="submit" value="Ajouter la grossesse">
      </fieldset>
 </form> 
-<br /><a href="selectionPatient.html">Retour à la saisie du numero de dossier</a><br />
+<br /><a href="ModSelecPat.html">Retour à la saisie du numero de dossier</a><br />
  <a href="menu.html">Retour a la page principale</a>
 </body>
 </html>
+
